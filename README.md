@@ -22,16 +22,8 @@ Steps to install the necessary dependencies:
     ```
 4. Download GLAD from [here](https://glad.dav1d.de/) by setting the language to C/C++, GL version to 3.3 or above, profile to core, and leaving extensions empty. Press generate, download the .zip, and copy the include and src directories into `LearnOpenGL/external`.
 
-## Setup
-Instructions to set up the project in Visual Studio Code on Windows:
-1. Clone the repository:
-    ```
-    git clone https://github.com/yourusername/LearnOpenGL.git
-    ```
-2. Open the project in Visual Studio Code.
-
 ## Running the Project
-Steps to build and run the project on Windows:
+Steps to build and run the project (on Windows):
 1. Build the project:
     ```
     cmake -S . -B build
