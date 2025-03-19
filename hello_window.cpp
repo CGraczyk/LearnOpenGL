@@ -1,5 +1,8 @@
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+// Be sure to include GLAD before GLFW. The include file for GLAD includes the required OpenGL headers behind the scenes (like GL/gl.h) so be sure to include GLAD before other header files that require OpenGL (like GLFW). 
+
 #include <iostream>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
@@ -13,13 +16,18 @@ int main() {
         return -1;
     }
 
-    // 2. Set GLFW window hints
+    // 2. Set GLFW window hints to the OpenGL version and profile we want to use
+    // This is done before creating the window and OpenGL context
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
     // 3. Create the window
-    GLFWwindow* window = glfwCreateWindow(800, 600, "LearnOpenGL", NULL, NULL);
+    int window_height = 800;
+    int window_width = 600;
+    char const* window_title = "LearnOpenGL";
+    
+    GLFWwindow* window = glfwCreateWindow(window_height, window_width, window_title, NULL, NULL);
     if (!window) {
         std::cerr << "Failed to create GLFW window" << std::endl;
         glfwTerminate();

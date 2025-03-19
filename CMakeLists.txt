@@ -16,7 +16,7 @@ find_package(OpenGL REQUIRED)
 
 # Executable
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR})
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} hello_window.cpp)
 
 # Link Libraries
 target_link_libraries(${PROJECT_NAME} glfw glad OpenGL::GL)
