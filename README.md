@@ -31,5 +31,5 @@ Steps to build and run the project (on Windows):
     ```
 2. Run the executable:
     ```
-    .\build\Debug\LearnOpenGL.exe
+    .\Debug\LearnOpenGL.exe
     ```
